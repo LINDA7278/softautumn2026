@@ -15,3 +15,4 @@ A GM (game manager) leading Lasers and Feelings session needs a software to help
 GM: A person managing a Lasers and feelings seasion
 
 # (for part b) Requirement 
+This is the part of our assignment so I am just writing to put on the github.
