@@ -1,5 +1,4 @@
-### Software Engineering Course Project, Fall 2026
-### Prothoma Linda
+First version.
 
 # Backround
 # Introduction
