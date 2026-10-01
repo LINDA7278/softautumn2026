@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lasers and Feelings Tool</title>
 </head>
 <body>
-    <p>Hello, World!</p>
+    <button onClick="throw();" type="button">Throw</button>
+    <p>Result: </p>
+    <p>"result"<p></p>
+
+    <script>
+        function throwDice() {
+            let result = Math.floor(Math.random() *6) + 1);
+            document.getElementById("result").innerText = result;
+        }
+
+    </script>
 </body>
 </html>
