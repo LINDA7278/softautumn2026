@@ -2,44 +2,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>Contact - Pohjanpiha Festival</title>
 </head>
-<body>
+<body style="background:#f4f6fb; color:#1b2a4a; font-family:Arial">
+    <header style="background:#1b2a4a; color:white; padding:15px">
+        <h1>Contact Us</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="listing.html">Programme</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-<header>
-    <h1>Pohjanpiha Festival</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="listing.html">Artists</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
-
-<main>
-    <h2>Contact Us</h2>
-    <p>Have questions about accessibility or the festival? Contact us!</p>
-
-    <form onsubmit="event.preventDefault(); document.getElementById('result').textContent='Your question is ready to send!';">
+    <h2>Ask us a question</h2>
+    <form id="form">
         <label>Name:</label>
-        <input type="text" required>
+        <input type="text" required><br><br>
 
         <label>Email:</label>
-        <input type="email" required>
+        <input type="email" required><br><br>
 
-        <label>Your Question:</label>
-        <textarea required></textarea>
+        <label>Question:</label><br>
+        <textarea required minlength="5"></textarea><br><br>
 
         <button type="submit">Submit</button>
     </form>
 
-    <p id="result" role="status"></p>
-</main>
+    <p id="message"></p>
 
-<footer>
-    <p>&copy; 2026 Pohjanpiha Festival</p>
-</footer>
+    <script>
+        document.getElementById("form").onsubmit = function(event) {
+            event.preventDefault();
+            document.getElementById("message").textContent =
+                "Your question is ready! It has not been sent yet.";
+        };
+    </script>
 
+    <footer><p>Pohjanpiha Festival</p></footer>
 </body>
 </html>
+
