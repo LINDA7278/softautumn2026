@@ -1,59 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact - Pohjanpiha Festival</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Pohjanpiha Festival</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
 </head>
 <body>
- 
+
     <header>
-<h1>Contact Us</h1>
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="listing.html">Programme</a>
-<a href="contact.html">Contact</a>
-</nav>
-</header>
- 
+        <h1>Contact Us</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="listing.html">Programme</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
     <main>
-<h2>Ask us a question</h2>
- 
+        <h2>Ask us a question</h2>
+
+        <button type="button" id="info-btn" popovertarget="festival-info">Festival info</button>
+        <div id="festival-info" popover>
+            <p>Pohjanpiha Festival takes place over two days in July in Alavus with three stages and around 30 artists.</p>
+        </div>
+
         <form id="form">
-<label for="name">Name:</label>
-<input type="text" id="name" name="name" required>
- 
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" aria-describedby="name-error" required>
+            <p id="name-error" class="error"></p>
+
             <label for="email">Email:</label>
-<input type="email" id="email" name="email" required>
- 
+            <input type="email" id="email" name="email" aria-describedby="email-error" required>
+            <p id="email-error" class="error"></p>
+
             <label for="question">Question:</label>
-<textarea id="question" name="question" required minlength="5"></textarea>
- 
+            <textarea id="question" name="question" aria-describedby="question-error" required minlength="5"></textarea>
+            <p id="question-error" class="error"></p>
+
             <button type="submit">Submit</button>
-</form>
- 
-        <p id="message"></p>
-</main>
- 
-    <script>
+        </form>
 
-        document.getElementById("form").onsubmit = function(event) {
+        <p id="message" role="status"></p>
+    </main>
 
-            event.preventDefault();
- 
-            document.getElementById("message").textContent =
-
-                "Your question is ready! It has not been sent yet.";
-
-        };
-</script>
- 
     <footer>
-<p>© Pohjanpiha Festival</p>
-</footer>
- 
+        <p>© Pohjanpiha Festival</p>
+    </footer>
+
 </body>
 </html>
- 
