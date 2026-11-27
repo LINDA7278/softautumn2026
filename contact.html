@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Pohjanpiha Festival</title>
     <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
 </head>
 <body>
 
@@ -21,30 +22,29 @@
     <main>
         <h2>Ask us a question</h2>
 
+        <button type="button" id="info-btn" popovertarget="festival-info">Festival info</button>
+        <div id="festival-info" popover>
+            <p>Pohjanpiha Festival takes place over two days in July in Alavus with three stages and around 30 artists.</p>
+        </div>
+
         <form id="form">
-            <label>Name:</label>
-            <input type="text" required><br><br>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" aria-describedby="name-error" required>
+            <p id="name-error" class="error"></p>
 
-            <label>Email:</label>
-            <input type="email" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" aria-describedby="email-error" required>
+            <p id="email-error" class="error"></p>
 
-            <label>Question:</label><br>
-            <textarea required minlength="5"></textarea><br><br>
+            <label for="question">Question:</label>
+            <textarea id="question" name="question" aria-describedby="question-error" required minlength="5"></textarea>
+            <p id="question-error" class="error"></p>
 
             <button type="submit">Submit</button>
         </form>
 
-        <p id="message"></p>
+        <p id="message" role="status"></p>
     </main>
-
-    <script>
-        document.getElementById("form").onsubmit = function(event) {
-            event.preventDefault();
-
-            document.getElementById("message").textContent =
-                "Your question is ready! It has not been sent yet.";
-        };
-    </script>
 
     <footer>
         <p>© Pohjanpiha Festival</p>
