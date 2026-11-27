@@ -12,7 +12,7 @@
 
 /* BASIC SETTINGS */
 
-* {
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
@@ -135,6 +135,11 @@ textarea {
     padding: 10px;
     margin: 5px 0 15px;
     font: inherit;
+}
+
+form button[type="submit"] {
+    display: block;
+    margin-top: 8px;
 }
 
 /* E3: FILTER, ERRORS & POPOVER */
