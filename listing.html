@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programme - Pohjanpiha Festival</title>
     <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
 </head>
 <body>
     <header>
@@ -18,18 +19,27 @@
     </header>
 
     <main>
+        <div class="filter-controls" role="group" aria-label="Filter programme by stage">
+            <button type="button" data-stage="all" aria-pressed="true">All stages</button>
+            <button type="button" data-stage="Main Stage" aria-pressed="false">Main Stage</button>
+            <button type="button" data-stage="Lake Stage" aria-pressed="false">Lake Stage</button>
+            <button type="button" data-stage="Barn Stage" aria-pressed="false">Barn Stage</button>
+        </div>
+
+        <p id="programme-status" role="status"></p>
+
         <h2>Day 1</h2>
-        <ul>
-            <li>16:00 - Main Stage - Artist announcement coming soon</li>
-            <li>17:00 - Lake Stage - Artist announcement coming soon</li>
-            <li>18:00 - Barn Stage - Artist announcement coming soon</li>
+        <ul class="programme-list">
+            <li data-stage="Main Stage">16:00 - Main Stage - Artist announcement coming soon</li>
+            <li data-stage="Lake Stage">17:00 - Lake Stage - Artist announcement coming soon</li>
+            <li data-stage="Barn Stage">18:00 - Barn Stage - Artist announcement coming soon</li>
         </ul>
 
         <h2>Day 2</h2>
-        <ul>
-            <li>14:00 - Barn Stage - Artist announcement coming soon</li>
-            <li>16:00 - Lake Stage - Artist announcement coming soon</li>
-            <li>18:00 - Main Stage - Artist announcement coming soon</li>
+        <ul class="programme-list">
+            <li data-stage="Barn Stage">14:00 - Barn Stage - Artist announcement coming soon</li>
+            <li data-stage="Lake Stage">16:00 - Lake Stage - Artist announcement coming soon</li>
+            <li data-stage="Main Stage">18:00 - Main Stage - Artist announcement coming soon</li>
         </ul>
     </main>
 
