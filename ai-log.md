@@ -9,4 +9,5 @@
 
 - **Tool used:** ChatGPT
 - **What I asked for:** Help with API integration, pagination, error handling, responsive styling and the client's starred gigs feature.
-- **What I used and checked:** Used AI-generated HTML, CSS and JavaScript code. Checked the API responses and customer number. Final browser testing is pending.
+- **What I used and checked:** Used AI-generated HTML, CSS and JavaScript code. Checked the API responses, tested slow, empty, 429 and 500 responses, removed the simulation code and checked normal programme loading and pagination.
+
