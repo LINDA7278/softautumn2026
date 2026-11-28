@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Pohjanpiha Festival</title>
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="customer.js"></script>
 </head>
 <body>
     <header>
@@ -19,14 +21,33 @@
 
     <main>
         <h2>Welcome to Alavus!</h2>
+
         <p>Pohjanpiha Festival is a summer music festival in Alavus, Finland.</p>
+
         <p>Enjoy two days of music, three stages and around 30 artists.</p>
 
+        <section>
+            <h2>Festival information</h2>
+
+            <p id="customer-status" role="status">
+                Loading festival information...
+            </p>
+
+            <div id="customer-details"></div>
+
+            <button type="button" id="customer-retry" hidden>
+                Try again
+            </button>
+        </section>
+
         <h2>Accessibility</h2>
+
         <p>Contact us for information about accessible routes, toilets, parking and viewing areas.</p>
+
         <p>We want all visitors to feel welcome at the festival.</p>
 
         <p><a href="contact.html">Ask us a question</a></p>
+
     </main>
 
     <footer>
@@ -34,4 +55,6 @@
     </footer>
 </body>
 </html>
+
+
 
