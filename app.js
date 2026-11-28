@@ -1,4 +1,4 @@
-const filterButtons = document.querySelectorAll('[data-stage]');
+const filterButtons = document.querySelectorAll('button[data-stage]');
 
 const programmeItems = document.querySelectorAll('.programme-list li[data-stage]');
 
