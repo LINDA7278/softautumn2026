@@ -1,55 +1,134 @@
-# Software Engineering Course Project, Fall 2026
 
-**Prothoma Linda**
+# Pohjanpiha Festival
 
-## Background
+## Client-Side Programming – Autumn 2026
 
-Lasers and Feelings is a quick-play role-playing game. It is based on the following premise:
+## Project Overview
 
-> You are the crew of the interstellar scout ship Raptor. Your mission is to explore uncharted regions of space, deal with aliens both friendly and deadly, and defend the Consortium worlds against space dangers. Captain Darcy has been overcome by the strange psychic entity known as Something Else, leaving you to fend for yourselves while he recovers in a medical pod.
+Pohjanpiha Festival is a summer music festival in Alavus, Finland.
 
-## Introduction
+The goal of this project is to create a simple, fast, responsive and accessible website where visitors can explore the festival programme, find festival information and prepare contact enquiries.
 
-A GM (Game Master) leading a Lasers and Feelings session needs software to help them and the players play the game. The most important feature is the ability to roll dice (see the Rules for Lasers and Feelings). Other useful features may include character information, ship information, adventure creation, and game management.
+## Live Website
 
-## Dictionary
+https://linda7278.github.io/softautumn2026/
 
-- **GM:** A person who manages a Lasers and Feelings session.
-- **Dice throw:** Generates a random number between 1 and 6.
+## Customer
 
-## Requirements
+- Festival: Pohjanpiha Festival
+- Customer number: 3
+- Location: Alavus, Finland
+- Contact person: Noora Lehtimäki
+- Festival dates: 16–17 July 2027
 
-Requirements are written as user stories. They are organized by priority in the product backlog and sprint backlogs.
+## Website Pages
 
-## Product backlog
+- Home: Introduction to the festival.
+- About: Festival information and accessibility.
+- Programme: Festival gigs loaded from the API.
+- Contact: Contact form with accessible validation.
 
-### Ordered
+## Technologies
 
-None.
+- HTML5
+- CSS3
+- JavaScript
+- JavaScript modules
+- Fetch API
+- LocalStorage
+- GitHub Pages
 
-### Not ordered or require elaboration
+## E1 and E2 – Website Structure and Styling
 
-- As a player, I want to be able to set my number, so I can compare it with the result of my dice throw.
-- As a player, I want the software to save my information (number, name, style, and role), so I can use it in multiple playing sessions.
-- As a GM, I want to be able to roll a die, so I can create a random adventure.
-- As a player, I want to see my dice roll result clearly, so I can know whether my action succeeds.
-- As a GM, I want to see the dice roll result, so I can manage the game.
+- Semantic HTML structure.
+- Consistent navigation.
+- Responsive desktop and mobile layouts.
+- Consistent colours, fonts and spacing.
+- Dark mode support.
+- Keyboard accessibility.
 
-## Sprint 1 backlog
+## E3 – JavaScript Interactivity
 
-- **(Done)** As a GM, I want to be able to use the software in a modern web browser, because web browsers are easy to use and readily available.
-- **(Done)** As a player, I want to be able to roll a die, because the result determines whether my action succeeds.
+- Programme filtering by stage.
+- Accessible contact form validation.
+- Clear validation and status messages.
+- Contact form draft saving using LocalStorage.
+- Festival information popover.
 
-## Sprint 2 backlog
+The contact form is a client-side demonstration and does not send messages to a server.
 
-- **(Not started)** As a player, I want to be able to give my character a name, so I can feel immersed in the game.
-- **(Not started)** As a player, I want to be able to choose a style and role for my character, so I can remember my character's details.
+## E4 – API Integration
 
-## Data
+The website retrieves festival data from the course API.
 
-- **Result:** The result of the latest dice throw. The value is 1, 2, 3, 4, 5, or 6.
-- **Character name:** A character name, such as Jim Powers.
-- **Character style:** One of Alien, Android, Dangerous, Heroic, Hot-Shot, Intrepid, or Savvy.
-- **Character role:** One of Doctor, Envoy, Engineer, Explorer, Pilot, Scientist, or Soldier.
+API base URL:
 
-*To be continued.*
+https://vectorsigma.org/briefer/api/v1
+
+Customer number: 3
+
+### API Endpoints
+
+- `/customer?customer=3`
+- `/items?customer=3`
+
+### E4 Features
+
+- Dynamic festival programme.
+- Festival information loaded from the customer API.
+- Loading, empty and error states.
+- HTTP 429 handling using Retry-After.
+- Limited retry attempts.
+- Pagination using the Show more button.
+- Stage filtering on loaded programme data.
+- Handling missing information and images.
+- Responsive programme cards.
+
+## Client Change Request
+
+The client requested that visitors should be able to star gigs, keep their starred gigs after reloading the website and show only starred gigs.
+
+### Implementation
+
+The feature is implemented on the Programme page.
+
+Visitors can:
+
+- Star their favourite gigs.
+- Remove gigs from their favourites.
+- Keep their starred gigs after refreshing the page.
+- Filter the programme to show only starred gigs.
+
+Starred gig IDs are stored in LocalStorage.
+
+Relevant files:
+
+- `listing.html`
+- `programme.js`
+- `style.css`
+
+## Project Structure
+
+- `index.html` – Home page
+- `about.html` – Festival information
+- `listing.html` – Festival programme
+- `contact.html` – Contact form
+- `style.css` – Website styling
+- `app.js` – Contact form interactivity
+- `api.js` – API requests and retry handling
+- `programme.js` – Programme rendering, filtering and favourites
+- `customer.js` – Customer information rendering
+- `plan.md` – Website plan
+- `moodboard.md` – Visual design planning
+- `ai-log.md` – AI usage documentation
+- `README.md` – Project documentation
+
+## Running the Project
+
+The website can be accessed through GitHub Pages.
+
+For local development, open the project using a local web server, such as Live Server in Visual Studio Code.
+
+## AI Usage
+
+AI assistance is documented in `ai-log.md`.
