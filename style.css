@@ -307,3 +307,130 @@ img {
         outline-color: var(--accent-link);
     }
 }
+
+/* E4: FESTIVAL PROGRAMME */
+
+.programme-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.gig-card {
+    border: 1px solid var(--text-main);
+    border-radius: 8px;
+    padding: 16px;
+    background: var(--bg-page);
+    color: var(--text-main);
+    overflow-wrap: anywhere;
+}
+
+.gig-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.gig-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    border-radius: 5px;
+    margin-bottom: 12px;
+}
+
+.gig-card p {
+    margin: 8px 0;
+}
+
+/* STAR BUTTONS */
+
+.star-button {
+    margin-top: 12px;
+}
+
+.star-button[aria-pressed="true"] {
+    background: #f5c451;
+    color: #1b2a4a;
+    font-weight: bold;
+}
+
+/* STARRED-ONLY FILTER */
+
+.star-filter {
+    margin: 16px 0;
+}
+
+.star-filter label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.star-filter input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+/* LOADING AND STATUS MESSAGES */
+
+#programme-status,
+#customer-status {
+    font-weight: bold;
+    min-height: 1.5em;
+    margin: 16px 0;
+}
+
+/* PAGINATION AND RETRY BUTTONS */
+
+#show-more,
+#retry-button,
+#customer-retry {
+    margin-top: 16px;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* CUSTOMER INFORMATION */
+
+#customer-details:not(:empty) {
+    border: 1px solid var(--text-main);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 24px;
+    overflow-wrap: anywhere;
+}
+
+#customer-details p {
+    margin: 8px 0;
+}
+
+/* E4: MOBILE LAYOUT */
+
+@media (max-width: 600px) {
+    .programme-list {
+        grid-template-columns: 1fr;
+    }
+
+    .gig-card {
+        padding: 12px;
+    }
+
+    #show-more,
+    #retry-button,
+    #customer-retry {
+        width: 100%;
+    }
+}
