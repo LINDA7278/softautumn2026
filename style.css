@@ -1,3 +1,4 @@
+
 /* COLOURS, FONTS AND SPACING */
 
 :root {
@@ -123,6 +124,10 @@ button:hover {
 
 /* FORMS */
 
+form {
+    max-width: 500px;
+}
+
 label {
     display: block;
     font-weight: bold;
@@ -140,6 +145,7 @@ textarea {
 form button[type="submit"] {
     display: block;
     margin-top: 8px;
+    margin-left: auto;
 }
 
 /* E3: FILTER, ERRORS & POPOVER */
@@ -160,10 +166,11 @@ form button[type="submit"] {
     color: var(--accent-link);
     font-weight: bold;
     margin: -8px 0 12px;
+    min-height: 3em;
 }
 
 .error:empty {
-    display: none;
+    visibility: hidden;
 }
 
 [aria-invalid="true"] {
@@ -235,6 +242,10 @@ img {
 
     main {
         padding: 15px 5px;
+    }
+
+    .error {
+        min-height: 4.5em;
     }
 }
 
